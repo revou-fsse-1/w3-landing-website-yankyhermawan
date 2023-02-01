@@ -1,0 +1,41 @@
+* {
+	top: 0;
+	left: 0;
+}
+a {
+	text-decoration: none;
+	color: black;
+	padding: 20px;
+}
+.header {
+	width: 100%;
+}
+li {
+	display: inline;
+	font-size: 16pt;
+}
+
+ul {
+	list-style-type: none;
+	float: right;
+}
+
+.navbar {
+	background-color: red;
+	position: fixed;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.active {
+	background-color: aqua;
+}
+
+.home {
+	font-size: 20pt;
+	position: relative;
+	margin: 120px auto;
+}
+h1 {
+	text-align: center;
+}
