@@ -49,23 +49,66 @@
 			</section>
 			<section id="gallery" class="gallery_page">
 				<h2>Gallery</h2>
-				<div class="grid_container">
+				<div class="grid_container three_rows">
 					<img src="./images/naruto_childhood.jpg" class="image1" />
 					<img src="./images/naruto_sage_mode.png" class="image2" />
 					<img src="./images/naruto_sannin_kyubi.jpg" class="image3" />
 					<img src="./images/sasuke_akatsuki.jpg" class="image4" />
+					<iframe
+						width="560"
+						height="315"
+						src="https://www.youtube.com/embed/tcRFfox-K7g"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
 				</div>
 			</section>
-			<section class="grid_container">
-				<form>
-					<span class="input left first">First Name: </span>
-					<input type="text" />
-					<span class="input right first">Last Name:</span>
-					<input type="text" />
-					<span class="input left second">Email:</span>
+			<section class="grid_container five_rows border">
+				<form action="#">
+					<span class="title left first" required>First Name: </span>
+					<input type="text" id="first_name" oninput="myFunction()" value="" />
+					<span class="title right first">Last Name:</span>
+					<input type="text" id="last_name" oninput="myFunction()" value="" />
+					<span class="title left second">Email:</span>
 					<input type="email" />
+					<span class="title right second">Tell Us:</span>
+					<textarea rows="3"></textarea>
+					<span class="title left third">Gender:</span>
+					<div>
+						<input type="radio" name="gender" id="male" />
+						<label for="male">Male</label>
+					</div>
+					<div>
+						<input type="radio" name="gender" id="female" />
+						<label for="female">Female</label>
+					</div>
+					<div>
+						<input type="radio" name="gender" id="not_to_say" />
+						<label for="not_to_say">Not to Say</label>
+					</div>
+					<span>Why You Like Naruto?</span>
+					<div>
+						<input type="checkbox" name="reason" id="strong" />
+						<label for="strong">Strong</label>
+					</div>
+					<div>
+						<input type="checkbox" name="reason" id="funny" />
+						<label for="funny">Funny</label>
+					</div>
+					<div>
+						<input type="checkbox" name="reason" id="cute" />
+						<label for="cute">Cute</label>
+					</div>
+					<div class="magic_parent">
+						<span id="magic"></span>
+					</div>
+					<button>Submit</button>
 				</form>
 			</section>
+			<section></section>
 		</main>
+		<script src="index.js"></script>
 	</body>
 </html>

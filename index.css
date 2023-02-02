@@ -2,7 +2,9 @@
 	top: 0;
 	left: 0;
 	box-sizing: border-box;
-	width: 100%;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
 }
 a {
 	text-decoration: none;
@@ -65,12 +67,19 @@ ul {
 
 .grid_container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 2fr);
+	grid-template-columns: repeat(4, 2fr);
 	gap: 10px;
 	align-items: center;
 	margin-top: 50px;
 	font-size: 20pt;
+}
+
+.three_rows {
+	grid-template-rows: repeat(3, 2fr);
+}
+
+.five_rows {
+	grid-template-rows: repeat(5, 2fr);
 }
 .image1 {
 	grid-column: 1 / 3;
@@ -120,10 +129,17 @@ form {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="textarea"] {
 	font-size: 20pt;
 	border-radius: 10px;
 	border: 1px solid rgb(67, 173, 156);
+}
+
+iframe {
+	grid-row: 3;
+	grid-column: 2/ 2 span;
+	height: 100%;
 }
 
 .left {
@@ -139,4 +155,40 @@ input[type="email"] {
 }
 .second {
 	grid-row: 2;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+}
+
+button {
+	grid-column: 1/4 span;
+	font-size: 25pt;
+}
+
+.border {
+	border: 1px solid rgb(29, 245, 0);
+	border-radius: 10px;
+}
+
+img {
+	border-radius: 20px;
+}
+
+#magic {
+	font-size: 25pt;
+	grid-column: 1/4 span;
+	text-align: center;
+}
+
+.magic_parent {
+	display: contents;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: blanchedalmond;
+	transition: 1s;
 }
