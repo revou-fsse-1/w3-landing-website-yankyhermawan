@@ -10,7 +10,36 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav class="navbar">
+			<nav class="menu hide" id="side_menu">
+				<img
+					src="/images/burger_button.png"
+					class="burger_button"
+					id="burger"
+					onclick="menu_button()"
+				/>
+				<div class="open_menu hide" id="menu">
+					<img
+						src="/images/close_button.png"
+						class="close_button hide"
+						id="close"
+						onclick="close_button()"
+					/>
+					<div class="navbar vertical hide" id="side_navbar">
+						<ul>
+							<li>
+								<a href="/" class="home active">Home</a>
+							</li>
+							<li>
+								<a href="#about" class="about">About</a>
+							</li>
+							<li>
+								<a href="#gallery" class="gallery">Gallery</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav class="navbar horizontal show" id="top_menu">
 				<ul>
 					<li>
 						<a href="/" class="home active">Home</a>
@@ -25,12 +54,17 @@
 			</nav>
 		</header>
 		<main>
-			<section id="home" class="home_page">
-				<h1>Naruto Official Fan Club</h1>
-				<figure>
-					<img src="./images/naruto_wallpaper.jpg" />
-					<figcaption>Naruto and Gamakichi</figcaption>
-				</figure>
+			<section class="home_page">
+				<div class="home">
+					<h1>Naruto Official Fan Club</h1>
+					<figure>
+						<img
+							src="./images/naruto_wallpaper.jpg"
+							alt="Naruto Summons Gamakichi"
+						/>
+						<figcaption>Naruto and Gamakichi</figcaption>
+					</figure>
+				</div>
 			</section>
 			<section id="about" class="about_page">
 				<h2>About</h2>
@@ -44,16 +78,32 @@
 						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 						culpa qui officia deserunt mollit anim id est laborum.
 					</span>
-					<img src="/images/sasuke_akatsuki.jpg" />
+					<img src="/images/sasuke_akatsuki.jpg" alt="Sasuke in Akatsuki" />
 				</div>
 			</section>
 			<section id="gallery" class="gallery_page">
 				<h2>Gallery</h2>
 				<div class="grid_container three_rows">
-					<img src="./images/naruto_childhood.jpg" class="image1" />
-					<img src="./images/naruto_sage_mode.png" class="image2" />
-					<img src="./images/naruto_sannin_kyubi.jpg" class="image3" />
-					<img src="./images/sasuke_akatsuki.jpg" class="image4" />
+					<img
+						src="./images/naruto_childhood.jpg"
+						class="image1"
+						alt="Naruto Childhood"
+					/>
+					<img
+						src="./images/naruto_sage_mode.png"
+						class="image2"
+						alt="Naruto Entering Sage Mode"
+					/>
+					<img
+						src="./images/naruto_sannin_kyubi.jpg"
+						class="image3"
+						alt="Naruto Ultimate Mode"
+					/>
+					<img
+						src="./images/sasuke_akatsuki.jpg"
+						class="image4"
+						alt="Sasuke in Akatsuki"
+					/>
 					<iframe
 						width="560"
 						height="315"
@@ -65,12 +115,22 @@
 					></iframe>
 				</div>
 			</section>
-			<section class="grid_container five_rows border">
+			<section class="form_section grid_container five_rows border">
 				<form action="#">
 					<span class="title left first" required>First Name: </span>
-					<input type="text" id="first_name" oninput="myFunction()" value="" />
+					<input
+						type="text"
+						id="first_name"
+						oninput="magicFunction()"
+						value=""
+					/>
 					<span class="title right first">Last Name:</span>
-					<input type="text" id="last_name" oninput="myFunction()" value="" />
+					<input
+						type="text"
+						id="last_name"
+						oninput="magicFunction()"
+						value=""
+					/>
 					<span class="title left second">Email:</span>
 					<input type="email" />
 					<span class="title right second">Tell Us:</span>
@@ -107,7 +167,6 @@
 					<button>Submit</button>
 				</form>
 			</section>
-			<section></section>
 		</main>
 		<script src="index.js"></script>
 	</body>
