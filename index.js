@@ -32,6 +32,6 @@ function close_button() {
 	document.getElementById("side_navbar").className = "navbar vertical hide";
 }
 
-var x = window.matchMedia("(max-width: 768px)");
+var x = window.matchMedia("(max-width: 1024px)");
 myFunction(x); // Call listener function at run time
 x.addListener(myFunction); // Attach listener function on state changes
