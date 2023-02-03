@@ -73,7 +73,7 @@ a:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 10%;
+	gap: 50px;
 }
 
 .about_page .flex_container {
@@ -317,6 +317,9 @@ footer {
 	footer {
 		font-size: 16pt;
 		height: 30px;
+	}
+	.flex_container {
+		flex-direction: column-reverse;
 	}
 }
 
