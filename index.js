@@ -35,3 +35,32 @@ function close_button() {
 var x = window.matchMedia("(max-width: 1024px)");
 myFunction(x); // Call listener function at run time
 x.addListener(myFunction); // Attach listener function on state changes
+
+window.onscroll = function () {
+	scrollFunction();
+};
+
+function scrollFunction() {
+	const y = window.scrollY;
+	const home1 = document.getElementById("home_id1");
+	const about1 = document.getElementById("about_id1");
+	const gallery1 = document.getElementById("gallery_id1");
+	console.log(y);
+	if (y >= 0) {
+		home1.className = "home active";
+		about1.className = "about";
+		gallery1.className = "gallery";
+	}
+	if (y >= 1000) {
+		home1.className = "home";
+		about1.className = "about active";
+		gallery1.className = "gallery";
+	}
+	if (y >= 1450) {
+		home1.className = "home";
+		about1.className = "about";
+		gallery1.className = "gallery active";
+	}
+}
+
+window.onload = scrollFunction();
